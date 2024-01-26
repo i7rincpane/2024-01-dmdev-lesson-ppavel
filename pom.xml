@@ -20,7 +20,11 @@
         <module>web</module>
     </modules>
 
-    <scm> <connection>scm:git</connection></scm>
+    <scm>
+        <connection>scm:git:git@github.com:i7rincpane/2024-01-dmdev-ppavel.git</connection>
+        <developerConnection>scm:git:git@github.com:i7rincpane/2024-01-dmdev-ppavel.git</developerConnection>
+        <url>https://github.com/i7rincpane/2024-01-dmdev-ppavel</url>
+    </scm>
 
     <properties>
         <app.env>dev</app.env>
@@ -74,8 +78,20 @@
             </resource>
         </resources>
         <!--    <finalName>ROOT</finalName>-->
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M7</version>
+            </plugin>
+
+        </plugins>
+
         <pluginManagement>
             <plugins>
+
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
